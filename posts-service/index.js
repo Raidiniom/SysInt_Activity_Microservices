@@ -30,7 +30,7 @@ const resolvers = {
   Mutation: {
     createPost: (_, args) => prisma.post.create({ data: args }),
     updatePost: (_, args) =>
-      prisma.post.update({ where: { id: parseInt(args.id) }, data: args }),
+      prisma.post.update({ where: { id: parseInt(args.id) }, data: {name: args.name, email: args.email} }),
     deletePost: (_, args) =>
       prisma.post.delete({ where: { id: parseInt(args.id) } }),
   }

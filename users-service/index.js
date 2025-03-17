@@ -30,7 +30,7 @@ const resolvers = {
   Mutation: {
     createUser: (_, args) => prisma.user.create({ data: args }),
     updateUser: (_, args) =>
-      prisma.user.update({ where: { id: parseInt(args.id) }, data: args }),
+      prisma.user.update({ where: { id: parseInt(args.id) }, data: {name: args.name, email: args.email} }),
     deleteUser: (_, args) =>
       prisma.user.delete({ where: { id: parseInt(args.id) } }),
   }
@@ -39,5 +39,5 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers });
 
 server.listen({ port: 4001 }).then(({ url }) => {
-  console.log(`íº€ Users service ready at ${url}`);
+  console.log(`ï¿½ï¿½ï¿½ Users service ready at ${url}`);
 });
