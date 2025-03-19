@@ -10,5 +10,11 @@
   },
   "devDependencies": {
     "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.13.4",
+    "graphql": "^16.10.0",
+    "graphql-ws": "^6.0.4",
+    "subscriptions-transport-ws": "^0.11.0"
   }
 }
