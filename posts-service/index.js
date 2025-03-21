@@ -69,7 +69,7 @@ const server = new ApolloServer({
   typeDefs, 
   resolvers,
   subscriptions: {
-    path: '/graphql',
+    path: '',
   }
 });
 

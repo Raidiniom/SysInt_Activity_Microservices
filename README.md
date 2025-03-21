@@ -76,3 +76,6 @@ Refer to the `index.js` implementation from the other services as a reference.
 ---
 
 💡 *Now, you're all set to develop and expand your GraphQL microservices! 🚀*
+
+npm install graphql-subscriptions
+npm install graphql-ws
