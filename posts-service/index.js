@@ -1,4 +1,4 @@
-const { ApolloServer, gql, PubSub } = require('apollo-server');
+const { ApolloServer, gql } = require('apollo-server');
 const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
@@ -20,10 +20,6 @@ const typeDefs = gql`
     updatePost(id: ID!, title: String, content: String): Post!
     deletePost(id: ID!): Post!
   }
-
-  type Subscription {
-    newpost: Post!
-  }
 `;
 
 const resolvers = {
@@ -37,16 +33,14 @@ const resolvers = {
       prisma.post.update({ where: { id: parseInt(args.id) }, data: {name: args.name, email: args.email} }),
     deletePost: (_, args) =>
       prisma.post.delete({ where: { id: parseInt(args.id) } }),
-  },
-  Subscription: {
-    newpost: {
-      subscribe: (_, __, { pubsub }) => pubsub.asyncIterator('NEW_POST'),
-    },
   }
 };
 
-const server = new ApolloServer({ typeDefs, resolvers, subscription: {path: '/subscriptions', }, });
+const server = new ApolloServer({ 
+  typeDefs, 
+  resolvers,
+});
 
 server.listen({ port: 4002 }).then(({ url }) => {
-  console.log(`��� Posts service ready at ${url}`);
+  console.log(`Posts service ready at ${url}`);
 });
