@@ -1,0 +1,84 @@
+client.js:133 WebSocket connection to 'ws://localhost:4002/' failed: 
+(anonymous)	@	client.js:133
+(anonymous)	@	client.js:250
+connect	@	client.js:122
+(anonymous)	@	client.js:328
+subscribe	@	client.js:380
+(anonymous)	@	index.ts:57
+Subscription	@	module.js:190
+subscribe	@	module.js:264
+complete	@	Concast.ts:218
+Concast.start	@	Concast.ts:109
+Concast	@	Concast.ts:86
+QueryManager.getObservableFromLink	@	QueryManager.ts:1179
+makeObservable	@	QueryManager.ts:1040
+QueryManager.startGraphQLSubscription	@	QueryManager.ts:1098
+ApolloClient.subscribe	@	ApolloClient.ts:506
+Object.assign.__	@	useSubscription.ts:356
+Subscription	@	module.js:190
+subscribe	@	module.js:264
+(anonymous)	@	useSubscription.ts:228
+subscribeToStore	@	react-dom-client.development.js:6333
+react-stack-bottom-frame	@	react-dom-client.development.js:22509
+runWithFiberInDEV	@	react-dom-client.development.js:543
+commitHookEffectListMount	@	react-dom-client.development.js:10739
+commitHookPassiveMountEffects	@	react-dom-client.development.js:10876
+commitPassiveMountOnFiber	@	react-dom-client.development.js:12652
+recursivelyTraversePassiveMountEffects	@	react-dom-client.development.js:12625
+commitPassiveMountOnFiber	@	react-dom-client.development.js:12755
+recursivelyTraversePassiveMountEffects	@	react-dom-client.development.js:12625
+commitPassiveMountOnFiber	@	react-dom-client.development.js:12646
+recursivelyTraversePassiveMountEffects	@	react-dom-client.development.js:12625
+commitPassiveMountOnFiber	@	react-dom-client.development.js:12755
+recursivelyTraversePassiveMountEffects	@	react-dom-client.development.js:12625
+commitPassiveMountOnFiber	@	react-dom-client.development.js:12646
+recursivelyTraversePassiveMountEffects	@	react-dom-client.development.js:12625
+commitPassiveMountOnFiber	@	react-dom-client.development.js:12657
+flushPassiveEffects	@	react-dom-client.development.js:15460
+(anonymous)	@	react-dom-client.development.js:15324
+performWorkUntilDeadline	@	scheduler.development.js:44
+apollo.js:19 WS error 
+Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+isTrusted
+: 
+true
+bubbles
+: 
+false
+cancelBubble
+: 
+false
+cancelable
+: 
+false
+composed
+: 
+false
+currentTarget
+: 
+WebSocket {url: 'ws://localhost:4002/', readyState: 3, bufferedAmount: 0, onopen: ƒ, onerror: ƒ, …}
+defaultPrevented
+: 
+false
+eventPhase
+: 
+0
+returnValue
+: 
+true
+srcElement
+: 
+WebSocket {url: 'ws://localhost:4002/', readyState: 3, bufferedAmount: 0, onopen: ƒ, onerror: ƒ, …}
+target
+: 
+WebSocket {url: 'ws://localhost:4002/', readyState: 3, bufferedAmount: 0, onopen: ƒ, onerror: ƒ, …}
+timeStamp
+: 
+462.09999990463257
+type
+: 
+"error"
+[[Prototype]]
+: 
+Event
+error	@	apollo.js:19

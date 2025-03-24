@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useQuery, useSubscription, gql, ApolloProvider } from '@apollo/client';
-import client from './apollo';
+import { useQuery, useSubscription, gql } from '@apollo/client';
 import './App.css';
 
 const get_posts = gql`
@@ -69,9 +68,9 @@ function Posts() {
 
 function App() {
   return (
-    <ApolloProvider client={client}>
+    <div className="App">
       <Posts />
-    </ApolloProvider>
+    </div>
   );
 }
 
