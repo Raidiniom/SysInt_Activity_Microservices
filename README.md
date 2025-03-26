@@ -59,6 +59,7 @@ model Book {
 
 ### 6️⃣ Run Database Migration  
 ```sh
+npx prisma generate
 npx prisma migrate dev --name init
 ```
 

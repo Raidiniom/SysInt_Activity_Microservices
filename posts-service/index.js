@@ -22,12 +22,6 @@ const typeDefs = gql`
     updatePost(id: ID!, title: String, content: String): Post!
     deletePost(id: ID!): Post!
   }
-
-  type Subscription {
-    postCreated: Post!
-    postUpdated: Post!
-    postDeleted: Post!
-  }
 `;
 
 const resolvers = {
@@ -52,25 +46,11 @@ const resolvers = {
       return post;
     },
   },
-  Subscription: {
-    postCreated: {
-      subscribe: () => pubsub.asyncIterator('POST_CREATED'),
-    },
-    postUpdated: {
-      subscribe: () => pubsub.asyncIterator('POST_UPDATED'),
-    },
-    postDeleted: {
-      subscribe: () => pubsub.asyncIterator('POST_DELETED'),
-    },
-  }
 };
 
 const server = new ApolloServer({ 
   typeDefs, 
   resolvers,
-  subscriptions: {
-    path: '',
-  }
 });
 
 server.listen({ port: 4002 }).then(({ url }) => {
