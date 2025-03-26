@@ -39,12 +39,13 @@ npm init -y
 
 ### 3️⃣ Install Dependencies  
 ```sh
-npm install prisma @prisma/client apollo-server graphql
+npm install apollo-server graphql graphql-subscriptions
 ```
 
 ### 4️⃣ Initialize Prisma (Using SQLite)  
 ```sh
 npx prisma init --datasource-provider sqlite
+npm install @prisma/client
 ```
 
 ### 5️⃣ Define the Database Schema  
@@ -69,6 +70,14 @@ Refer to the `index.js` implementation from the other services as a reference.
 
 ---
 
+### Frontend
+- npm create vite@latest frontend --template react
+- cd frontend
+- npm install @apollo/client graphql
+- npm run dev
+
+
+
 ### 🎯 Notes  
 - Ensure **Prisma** is correctly set up before running migrations.  
 - The **Apollo Server** is used to handle GraphQL queries and mutations.  
@@ -78,5 +87,3 @@ Refer to the `index.js` implementation from the other services as a reference.
 
 💡 *Now, you're all set to develop and expand your GraphQL microservices! 🚀*
 
-npm install graphql-subscriptions
-npm install graphql-ws
